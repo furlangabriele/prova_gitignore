@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.ChronologyPage"
+             BackgroundColor="Black"
+             Title="Cronologia">
+    <ContentPage.Content>
+        <StackLayout Padding="0, 10, 0, 10">
+            <CollectionView ItemsSource="{Binding Cronologia}"
+                SelectionMode="Single" 
+                x:Name="collectionViewChronology">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="Black"
+                               Margin="5, 5, 5, 10" 
+                               BorderColor="White"
+                               HasShadow="True">
+                            <Grid Padding="10">
+                                <Label Grid.Row="0"
+                                       Grid.Column="0"
+                                       FontAttributes="Italic"
+                                       Text="Expression: "
+                                       HorizontalOptions="End"
+                                       TextColor="White"/>
+                                <Label Grid.Row="0"
+                                       Grid.Column="1"
+                                       Grid.ColumnSpan="2"
+                                       Text="{Binding Expression}" 
+                                       TextColor="White"/>
+                                <Label Grid.Row="1"
+                                       Grid.Column="0"
+                                       HorizontalOptions="End"
+                                       Text="Result: "
+                                       FontAttributes="Italic"
+                                       TextColor="White"/>
+                                <Label Grid.Row="1"
+                                       Grid.Column="1"
+                                       Text="{Binding Result}"
+                                       Grid.ColumnSpan="2"
+                                       VerticalOptions="Start" 
+                                       FontAttributes="Bold"
+                                       TextColor="White"/>
+                                <ImageButton Source="bin" 
+                                             Clicked="OnDeleteObject"
+                                             Grid.Column="3"
+                                             Grid.RowSpan="2"
+                                             BackgroundColor="Black"/>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

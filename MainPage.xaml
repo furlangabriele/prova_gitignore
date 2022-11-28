@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.MainPage"
+             BackgroundColor="Black"
+             Title="Calcolatrice">
+
+    <StackLayout>
+        <Grid Margin="20, 20, 20, 20" RowSpacing="10" ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Frame CornerRadius="15"
+                Grid.Column="0" 
+                Grid.ColumnSpan="5" 
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Padding="0"
+                BackgroundColor="Black"
+                Margin="5, 5, 5, 10" 
+                BorderColor="White"
+                HasShadow="True">
+                <Label x:Name="lblExpressionContainer"
+                    Text=""
+                    Padding="10, 10, 10, 10"
+                    FontSize="Large"
+                    VerticalOptions="Center"
+                    HorizontalOptions="End"
+                    TextColor="White"/>
+            </Frame>
+            <Button Text="(" 
+                    Clicked="OnAddToExpression"  
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    BorderColor="White"
+                    CornerRadius="50"/>
+            <Button Text=")" 
+                    Clicked="OnAddToExpression"  
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    BorderColor="White"
+                    CornerRadius="50"/>
+            <Button Text="C" 
+                    Clicked="OnDeleteOne"  
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    BorderColor="White"
+                    CornerRadius="50"/>
+            <Button Text="CE" 
+                    Clicked="OnDeleteAll"  
+                    Grid.Row="2"
+                    Grid.Column="3"
+                    BorderColor="White"
+                    CornerRadius="50"/>
+            <Button Text="%" 
+                    Clicked="OnAddToExpression"  
+                    Grid.Row="2"
+                    Grid.Column="4"
+                    BackgroundColor="Orange"
+                    CornerRadius="50"/>
+            <Button Clicked="OnAddToExpression"  
+                    BackgroundColor="Orange"
+                    Grid.Column="4"
+                    Grid.Row="3"
+                    CornerRadius="50"
+                    Text="+"/>
+            <Button Clicked="OnAddToExpression"  
+                    BackgroundColor="Orange"
+                    Grid.Column="4"
+                    Grid.Row="4"
+                    CornerRadius="50"
+                    Text="-"/>
+            <Button Clicked="OnAddToExpression"  
+                    BackgroundColor="Orange"
+                    Grid.Column="4"
+                    Grid.Row="5"
+                    CornerRadius="50"
+                    Text="*"/>
+            <Button Clicked="OnAddToExpression"  
+                    BackgroundColor="Orange"
+                    Grid.Column="4"
+                    Grid.Row="6"
+                    CornerRadius="50"
+                    Text="/"/>
+            <Button Clicked="OnAddToExpression"  
+                    BackgroundColor="Orange"
+                    Grid.Column="3"
+                    Grid.Row="6"
+                    CornerRadius="50"
+                    Text="^"/>
+            <Button Clicked="OnAddToExpression"  
+                    BackgroundColor="Orange"
+                    Grid.Column="2"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="2"
+                    FontSize="Small"
+                    CornerRadius="50"
+                    Text="sqrt"/>
+            <Button Clicked="OnAddToExpression"  
+                    BackgroundColor="Orange"
+                    Grid.Column="3"
+                    Grid.Row="4"
+                    CornerRadius="50"
+                    Text="log"/>
+            <Button Clicked="OnAddToExpression"  
+                    BackgroundColor="Orange"
+                    Grid.Column="3"
+                    Grid.Row="5"
+                    CornerRadius="50"
+                    Text="10^"/>
+            <Button Clicked="OnGetResults"  
+                    BackgroundColor="Orange"
+                    Grid.Column="4"
+                    Grid.Row="7"
+                    CornerRadius="50"
+                    Text="="/>
+            <Button Clicked="OnAddToExpression"  
+                    BackgroundColor="Orange"
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    CornerRadius="50"
+                    Text="sin"/>
+            <Button Clicked="OnAddToExpression"  
+                    BackgroundColor="Orange"
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    CornerRadius="50"
+                    Text="cos"/>
+            <Button Text="." 
+                    Clicked="OnAddToExpression"  
+                    Grid.Row="7"
+                    Grid.Column="3"
+                    BorderColor="White"
+                    CornerRadius="50"/>
+            <Button Text="0" 
+                    Clicked="OnAddToExpression"  
+                    Grid.Row="7"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    BorderColor="White"
+                    CornerRadius="50"/>
+            <Button Text="1" 
+                    Clicked="OnAddToExpression"  
+                    Grid.Row="6"
+                    Grid.Column="0"
+                    BorderColor="White"
+                    CornerRadius="50"/>
+            <Button Text="2" 
+                    Clicked="OnAddToExpression"  
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    BorderColor="White"
+                    CornerRadius="50"/>
+            <Button Text="3" 
+                    Clicked="OnAddToExpression"  
+                    Grid.Row="6"
+                    Grid.Column="2"
+                    BorderColor="White"
+                    CornerRadius="50"/>
+            <Button Text="4" 
+                    Clicked="OnAddToExpression"  
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    BorderColor="White"
+                    CornerRadius="50"/>
+            <Button Text="5" 
+                    Clicked="OnAddToExpression"  
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    BorderColor="White"
+                    CornerRadius="50"/>
+            <Button Text="6" 
+                    Clicked="OnAddToExpression"  
+                    Grid.Row="5"
+                    Grid.Column="2"
+                    BorderColor="White"
+                    CornerRadius="50"/>
+            <Button Text="7" 
+                    Clicked="OnAddToExpression"  
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    BorderColor="White"
+                    CornerRadius="50"/>
+            <Button Text="8" 
+                    Clicked="OnAddToExpression"  
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    BorderColor="White"
+                    CornerRadius="50"/>
+            <Button Text="9" 
+                    Clicked="OnAddToExpression"  
+                    Grid.Row="4"
+                    Grid.Column="2"
+                    BorderColor="White"
+                    CornerRadius="50"/>
+        </Grid>
+        <Button Text="Cronologia" Clicked="GoToChronology" HorizontalOptions="Center"  VerticalOptions="End"/>
+    </StackLayout>
+
+</ContentPage>
